@@ -29,7 +29,7 @@ export default async (request) => {
 
     const token = Netlify.env.get("AIRTABLE_TOKEN");
     const baseId = Netlify.env.get("AIRTABLE_BASE_ID");
-    const tableName = Netlify.env.get("AIRTABLE_TABLE_NAME");
+    const tableName = Netlify.env.get("AIRTABLE_TABLE");
 
     if (!token || !baseId || !tableName) {
       return new Response(
